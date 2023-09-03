@@ -1,0 +1,11 @@
+[package]
+name = "get_all_interfaces"
+version = "0.1.0"
+edition = "2021"
+description = "Checks for all active interfaces on your device"
+license-file = "LICENSE.txt"
+readme = "README.md"
+authors = ["ksm <hw107744@gmail.com>"]
+
+[dependencies]
+pnet = "0.30"
