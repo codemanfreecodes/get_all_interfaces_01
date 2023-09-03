@@ -14,7 +14,19 @@ This Rust crate provides a simple and straightforward way to retrieve a list of 
 
 ## Usage
 
-To use this crate in your Rust project, add it as a dependency in your `Cargo.toml`:
+To use this crate in your Rust project, add this in your `main.rc`:
 
-```toml
-[dependencies]
+```
+extern crate get_all_interfaces;
+
+fn main() {
+        let interface = get_all_interfaces::select_network_interface();
+
+        match interface {
+                Some(iface) => println!("Selected interface: {}", iface.name),
+                None => println!("No network interface selected."),
+                }
+}
+
+```
+
